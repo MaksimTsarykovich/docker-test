@@ -18,8 +18,8 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./app:/var/www/html/public
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./app/:/var/www/html/public
+      - ./build/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - php
     networks:
